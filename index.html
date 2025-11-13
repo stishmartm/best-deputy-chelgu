@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ДЕПУТАТ ЧЕЛГУ</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Стили для мобильных устройств */
+        @media (max-width: 768px) {
+            .mobile-layout {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                min-height: 100vh;
+                padding: 20px;
+            }
+
+            .image-container {
+                width: 100%;
+                max-width: 300px;
+                margin-bottom: 30px;
+            }
+
+            .image-container img {
+                width: 100%;
+                height: auto;
+                border-radius: 15px;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            }
+
+            .text-content {
+                text-align: center;
+                width: 100%;
+            }
+
+            .text-content h1 {
+                font-size: 24px;
+                color: #333;
+                margin-bottom: 15px;
+                font-weight: bold;
+            }
+
+            .text-content p {
+                font-size: 16px;
+                color: #666;
+                line-height: 1.5;
+            }
+        }
+
+        /* Стили для десктопов */
+        @media (min-width: 769px) {
+            .desktop-layout {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 40px;
+                align-items: center;
+                min-height: 80vh;
+            }
+
+            .desktop-image {
+                width: 100%;
+                border-radius: 10px;
+            }
+
+            .desktop-text {
+                padding: 20px;
+            }
+
+            .desktop-text h1 {
+                font-size: 32px;
+                color: #333;
+                margin-bottom: 20px;
+            }
+
+            .desktop-text p {
+                font-size: 18px;
+                color: #666;
+                line-height: 1.6;
+            }
+        }
+
+        /* Скрываем ненужные блоки */
+        .mobile-layout {
+            display: none;
+        }
+
+        .desktop-layout {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-layout {
+                display: flex;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .desktop-layout {
+                display: grid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Мобильная версия -->
+        <div class="mobile-layout">
+            <div class="image-container">
+                <img src="https://i.pinimg.com/736x/be/0f/48/be0f4894e201fc60f41e2823cd58b32b.jpg" alt="Основное изображение">
+            </div>
+            <div class="text-content">
+                <h1>Заголовок сайта</h1>
+                <p>лучший депутат ща на этом блоке находится с мобилы</p>
+            </div>
+        </div>
+
+        <!-- Десктоп версия -->
+        <div class="desktop-layout">
+            <div class="desktop-text">
+                <h1>Добро пожаловать на наш сайт</h1>
+                <p>учший депутат ща на этом блоке находится с пк</p>
+            </div>
+            <div>
+                <img src="https://i.pinimg.com/736x/be/0f/48/be0f4894e201fc60f41e2823cd58b32b.jpg" alt="Десктоп изображение" class="desktop-image">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
